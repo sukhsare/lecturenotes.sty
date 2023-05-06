@@ -1,0 +1,37 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sukh}[2023/05/06 Sukh's custom package]
+
+%%Required packages and preliminary definitions, needed by the options
+\UseRawInputEncoding
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{parskip}
+\RequirePackage{amsmath,amsfonts,mathtools,amsthm,amssymb}
+\RequirePackage{hyperref}
+\RequirePackage{longtable}
+\RequirePackage{pgfplots}
+\RequirePackage{graphicx}
+\RequirePackage{gensymb}
+\RequirePackage{listings}
+\RequirePackage{titlesec}
+
+
+
+
+%%Customizing the colour of hyperlinks
+\hypersetup{colorlinks = true, urlcolor = blue, linkcolor = blue, citecolor = red}
+
+%Defining custom grey font 
+\newcommand{\wordcolour}{greycolour}
+
+%%Defining equal by definition symbol
+\newcommand*{\defeq}{\stackrel{\text{def}}{=}}
+
+%%Adding a new subsubsubsection through the use of paragraphs
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Defaulting graphicx path to "Images" folder
+\graphicspath{ {./Images/} }
