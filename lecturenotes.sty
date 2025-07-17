@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{sukh}[2023/05/06 Sukh's custom package]
+\ProvidesPackage{lecturenotes}[2023/05/06 LaTeX package for lecture notes]
 
-%%Required packages and preliminary definitions, needed by the options
+%% Required packages
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{parskip}
 \RequirePackage{amsmath,amsfonts,mathtools,amsthm,amssymb}
@@ -13,22 +13,18 @@
 \RequirePackage{listings}
 \RequirePackage{titlesec}
 
-
-%%Customizing the colour of hyperlinks
+%% Hyperlink colours
 \hypersetup{colorlinks = true, urlcolor = blue, linkcolor = blue, citecolor = red}
 
-%Defining custom grey font 
-\newcommand{\wordcolour}{greycolour}
-
-%%Defining equal by definition symbol
+%% Equal by definition symbol
 \newcommand*{\defeq}{\stackrel{\text{def}}{=}}
 
-%%Adding a new subsubsubsection through the use of paragraphs
+%% Subsubsubsection support
 \setcounter{secnumdepth}{4}
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
-%Defaulting graphicx path to "Images" folder
+%% Default graphics path
 \graphicspath{ {./Images/} }
